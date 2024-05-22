@@ -27,8 +27,8 @@ def highlight_text(text):
         indented_text = '&nbsp;'*indentation
 
         #highlight integers and floating numbers
-        line = int_pattern.sub(r'<span style="color:blue;">\1</span>', line)
         line = float_pattern.sub(r'<span style="color:blue;">\1</span>', line)
+        line = int_pattern.sub(r'<span style="color:blue;">\1</span>', line)
 
         #highlight keywords (case-insensitive)
         for keyword in lowercase_keywords:
